@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Delight Cake Shop | Cakes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bonheur+Royale&family=Dancing+Script:wght@400..700&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;500;600;700&family=Pompiere&family=Press+Start+2P&family=Whisper&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="cakes.html" class="active">Cakes</a>
+    <a href="login.html">Login</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+<main>
+
+  <section id="cakes">
+
+    <h2>Our Cakes</h2>
+
+    <div class="cake-grid">
+
+        <!-- Left Side - Cake List -->
+
+        <div class="cake-list">
+
+            <!-- Cake 1 -->
+
+            <div class="cake-card">
+
+                <img src="strawberry.jpg" alt="Strawberry Cake">
+
+                <div class="cake-details">
+
+                    <h3>Strawberry Cake</h3>
+
+                    <p>
+                        Fresh strawberry cake made with premium cream and juicy strawberries.
+                    </p>
+
+                    <div class="price">&#8377;800</div>
+
+                    <button class="btn"
+                        onclick="openModal('Strawberry Cake','&#8377;800')">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 2 -->
+
+            <div class="cake-card">
+
+                <img src="vanilla.jpg" alt="Vanilla Cake">
+
+                <div class="cake-details">
+
+                    <h3>Vanilla Cake</h3>
+
+                    <p>
+                        Soft and creamy vanilla cake perfect for birthdays and celebrations.
+                    </p>
+
+                    <div class="price">&#8377;550</div>
+
+                    <button class="btn"
+                        onclick="openModal('Vanilla Cake','&#8377;550')">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 3 -->
+
+            <div class="cake-card">
+
+                <img src="blueberry.jpg" alt="Blueberry Cake">
+
+                <div class="cake-details">
+
+                    <h3>Blueberry Cake</h3>
+
+                    <p>
+                        Delicious blueberry cake topped with rich cream and fresh berries.
+                    </p>
+
+                    <div class="price">&#8377;600</div>
+
+                    <button class="btn"
+                        onclick="openModal('Blueberry Cake','&#8377;600')">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side - Sidebar -->
+
+        <div class="sidebar">
+
+            <div class="sidebar-box">
+
+                <h3>Why Choose Us?</h3>
+
+                <p>&#10004; Fresh Ingredients</p>
+                <p>&#10004; Custom Cake Designs</p>
+                <p>&#10004; Fast Delivery</p>
+                <p>&#10004; Affordable Prices</p>
+
+            </div>
+
+            <div class="sidebar-box">
+
+                <h3>Best Sellers</h3>
+
+                <p>Chocolate Cake</p>
+                <p>Strawberry Cake</p>
+                <p> Blueberry Cake</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  </section>
+
+    <div class="modal" id="cakeModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Order Details</h2>
+
+            <p id="cakeName"></p>
+            <p id="cakePrice"></p>
+
+            <button onclick="saveCake()">Confirm Order</button>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>
+        &copy; 2026 Sweet Delight Cake Shop |
+        Fresh Cakes Made With Love
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

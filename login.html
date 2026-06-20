@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Delight Cake Shop | Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bonheur+Royale&family=Dancing+Script:wght@400..700&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;500;600;700&family=Pompiere&family=Press+Start+2P&family=Whisper&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="cakes.html">Cakes</a>
+    <a href="login.html" class="active">Login</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+<main>
+
+  <section id="login">
+
+    <h2>Login</h2>
+
+    <div class="login-box">
+
+      <form onsubmit="validateLogin(event)">
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Email" required
+          oninput="validateEmail()">
+
+        <span id="emailError"></span>
+
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          oninput="validatePassword()">
+
+        <span id="passwordError"></span>
+
+
+        <button type="submit">
+          Login
+        </button>
+
+
+        <p>
+          Don't have an account?
+          <a href="#">Sign Up</a>
+        </p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; 2026 Sweet Delight Cake Shop |
+        Fresh Cakes Made With Love
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
