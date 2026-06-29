@@ -411,3 +411,299 @@ document.querySelector("form").reset();
 
 
 }
+function registerUser(event)
+{
+
+event.preventDefault();
+
+
+let name =
+document.getElementById("regName").value.trim();
+
+
+let email =
+document.getElementById("regEmail").value.trim();
+
+
+let password =
+document.getElementById("regPassword").value;
+
+
+let eventDate =
+document.getElementById("eventDate").value;
+
+
+let occasion =
+document.getElementById("occasion").value;
+
+
+let photo =
+document.getElementById("photo");
+
+
+
+
+
+let nameError =
+document.getElementById("nameError");
+
+
+let emailError =
+document.getElementById("emailError");
+
+
+let passwordError =
+document.getElementById("passwordError");
+
+
+let dateError =
+document.getElementById("dateError");
+
+
+let occasionError =
+document.getElementById("occasionError");
+
+
+let photoError =
+document.getElementById("photoError");
+
+
+
+
+
+nameError.innerHTML="";
+emailError.innerHTML="";
+passwordError.innerHTML="";
+dateError.innerHTML="";
+occasionError.innerHTML="";
+photoError.innerHTML="";
+
+
+let valid=true;
+
+
+
+
+// Name
+
+if(name==="")
+{
+
+nameError.innerHTML="Name is required";
+
+valid=false;
+
+}
+
+
+
+
+// Email
+
+let emailPattern =
+/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+if(email==="")
+{
+
+emailError.innerHTML="Email is required";
+
+valid=false;
+
+}
+
+else if(!emailPattern.test(email))
+{
+
+emailError.innerHTML="Enter valid email format";
+
+valid=false;
+
+}
+
+
+
+
+
+// Password
+
+let passwordPattern =
+/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+
+
+
+if(password==="")
+{
+
+passwordError.innerHTML="Password is required";
+
+valid=false;
+
+}
+
+else if(!passwordPattern.test(password))
+{
+
+passwordError.innerHTML=
+"Password must contain 1 uppercase, 1 number, 1 special character";
+
+valid=false;
+
+}
+
+
+
+
+
+// Event Date
+
+if(eventDate==="")
+{
+
+dateError.innerHTML=
+"Event date is required";
+
+valid=false;
+
+}
+
+else
+{
+
+let selectedDate =
+new Date(eventDate);
+
+
+let today =
+new Date();
+
+
+if(selectedDate < today)
+{
+
+dateError.innerHTML=
+"Event date cannot be in the past";
+
+valid=false;
+
+}
+
+}
+
+
+
+
+
+// Occasion
+
+if(occasion==="")
+{
+
+occasionError.innerHTML=
+"Please select occasion";
+
+valid=false;
+
+}
+
+
+
+
+
+// Image
+
+if(photo.files.length===0)
+{
+
+photoError.innerHTML=
+"Please upload cake design image";
+
+valid=false;
+
+}
+
+
+
+
+
+if(valid)
+{
+
+
+let showData = () => {
+
+
+let image =
+URL.createObjectURL(photo.files[0]);
+
+
+
+let user = {
+
+name:name,
+
+email:email,
+
+eventDate:eventDate,
+
+occasion:occasion,
+
+image:image
+
+};
+
+
+
+
+localStorage.setItem(
+
+"RegistrationData",
+
+JSON.stringify(user)
+
+);
+
+
+
+
+document.getElementById("userCard").innerHTML =
+
+`
+
+<div class="card">
+
+<img src="${image}">
+
+
+<h3>Registration Details</h3>
+
+
+<p><b>Name:</b> ${name}</p>
+
+<p><b>Email:</b> ${email}</p>
+
+<p><b>Event Date:</b> ${eventDate}</p>
+
+<p><b>Occasion:</b> ${occasion}</p>
+
+
+</div>
+
+`;
+
+
+
+};
+
+
+showData();
+
+
+alert("Registration Successful");
+
+
+}
+
+
+}

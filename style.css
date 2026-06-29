@@ -787,3 +787,266 @@ span{
 
 
 }
+/* ===============================
+   Registration Page
+================================ */
+
+
+#registration{
+
+    text-align:center;
+    padding:40px 20px;
+
+}
+
+
+
+/* Registration Form Box */
+
+#registration .contact-box{
+
+    width:420px;
+
+    max-width:90%;
+
+    margin:30px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* Labels */
+
+#registration label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+    color:#4c1b33;
+
+}
+
+
+
+/* Inputs */
+
+
+#registration input,
+#registration select{
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:6px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+
+
+
+#registration input:focus,
+#registration select:focus{
+
+
+    outline:none;
+
+    border-color:#d63384;
+
+    box-shadow:0 0 5px rgba(214,51,132,0.3);
+
+}
+
+
+
+/* File Upload */
+
+
+#registration input[type="file"]{
+
+
+    background:#fff8f0;
+
+    cursor:pointer;
+
+}
+
+
+
+
+/* Error Messages */
+
+
+#registration span{
+
+
+    display:block;
+
+    text-align:left;
+
+    color:red;
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+
+
+/* Register Button */
+
+
+#registration .contact-btn{
+
+
+    width:160px;
+
+    background:#d63384;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    margin-top:25px;
+
+    border-radius:25px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+#registration .contact-btn:hover{
+
+
+    background:#a61e65;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+/* Registration Card */
+
+
+#userCard{
+
+
+    width:350px;
+
+    max-width:90%;
+
+    margin:30px auto;
+
+}
+
+
+
+
+.card{
+
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    text-align:center;
+
+}
+
+
+
+.card img{
+
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h3{
+
+
+    color:#d63384;
+
+}
+
+
+
+.card p{
+
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:600px){
+
+
+#registration .contact-box{
+
+
+    width:95%;
+
+}
+
+
+.card{
+
+
+    width:100%;
+
+}
+
+
+}
