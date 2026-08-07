@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Delight Cake Shop | Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bonheur+Royale&family=Dancing+Script:wght@400..700&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;500;600;700&family=Pompiere&family=Press+Start+2P&family=Whisper&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="cakes.html">Cakes</a>
+    <a href="login.html">Login</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+<main>
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+
+<div class="contact-box">
+
+
+<form onsubmit="validateContact(event)">
+
+
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<span id="nameError"></span>
+
+
+
+<label>Email</label>
+<input type="text" id="email" placeholder="Enter your email">
+
+<span id="emailError"></span>
+
+
+
+<label>Phone</label>
+<input type="text" id="phone" placeholder="Enter phone number">
+
+<span id="phoneError"></span>
+
+
+
+<label>Message</label>
+<textarea id="message" placeholder="Enter your message"></textarea>
+
+<span id="messageError"></span>
+
+
+
+<button type="submit" class="contact-btn">
+Send Message
+</button>
+
+
+</form>
+
+
+
+</div>
+
+
+
+<!-- Contact Details -->
+
+<div class="contact-details">
+
+<p>📍 Bangalore, Karnataka, India</p>
+
+<p>📞 +91 9876543210</p>
+
+<p>✉ sweetdelightcakes@gmail.com</p>
+
+
+
+<button class="location-btn" onclick="getLocation()">
+
+Get My Location
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
+</main>
+</body>
+ <footer>
+    <p>
+        &copy; 2024 Sweet Delight Cake Shop. All rights reserved.
+    </p>
+</footer>
+</html>

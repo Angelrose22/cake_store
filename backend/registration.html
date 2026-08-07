@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Registration Form</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="registration.html">Registration</a>
+
+</nav>
+
+
+
+<section id="registration">
+
+
+<h2>User Registration</h2>
+
+
+
+<div class="contact-box">
+
+
+<form onsubmit="registerUser(event)">
+
+
+
+<label>Name</label>
+
+<input 
+type="text"
+id="regName"
+placeholder="Enter your name">
+
+
+<span id="nameError"></span>
+
+
+
+
+<label>Email</label>
+
+<input 
+type="email"
+id="regEmail"
+placeholder="Enter your email">
+
+
+<span id="emailError"></span>
+
+
+
+
+
+<label>Password</label>
+
+<input 
+type="password"
+id="regPassword"
+placeholder="Enter password">
+
+
+<span id="passwordError"></span>
+
+
+
+
+
+<label>Event Date</label>
+
+<input 
+type="date"
+id="eventDate">
+
+<span id="dateError"></span>
+
+
+
+
+
+<select id="occasion">
+    <span id="occasionError"></span>
+
+<option value="">
+Select Occasion
+</option>
+
+<option>
+Birthday
+</option>
+
+<option>
+Wedding
+</option>
+
+<option>
+Anniversary
+</option>
+
+<option>
+Custom Cake
+</option>
+
+</select>
+
+
+
+<label> Upload Cake Design Image </label>
+
+
+<input 
+type="file"
+id="photo"
+accept="image/*">
+
+
+<span id="photoError"></span>
+
+
+
+
+
+<button 
+type="submit"
+class="contact-btn">
+
+Register
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+<!-- Display Card -->
+
+
+<div id="userCard"></div>
+
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>
+
+© 2026 Sweet Delight Cake Shop
+
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

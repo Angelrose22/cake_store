@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Delight Cake Shop | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bonheur+Royale&family=Dancing+Script:wght@400..700&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;500;600;700&family=Pompiere&family=Press+Start+2P&family=Whisper&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="cakes.html">Cakes</a>
+    <a href="login.html">Login</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+<main>
+
+    <header id="home" class="whisper-regular">
+        <h1>Sweet Delight Cakes</h1>
+
+       
+    
+
+    <!-- ============================================================
+         Carousel — 2 images + 1 video
+         Replace carousel1.jpg, carousel2.jpg and carousel-video.mp4
+         with your own media files.
+         ============================================================ -->
+    
+    <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+
+            <div class="carousel-slide">
+                 
+                 <video src="cakevideo.mp4" autoplay loop muted playsinline></video>
+                
+                <div class="carousel-caption">Handcrafted Celebration Cakes</div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="cake2.jpg" alt="Featured cake two">
+                <div class="carousel-caption">Fresh Ingredients, Every Bite</div>
+            </div>
+
+            <div class="carousel-slide">
+               <img src="background.jpg" alt="Featured cake one">
+                <div class="carousel-caption">Watch Us Bake With Love</div>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn prev" onclick="prevSlide()" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel-btn next" onclick="nextSlide()" aria-label="Next slide">&#10095;</button>
+
+        <div class="carousel-dots">
+            <button onclick="showSlide(0)" aria-label="Go to slide 1"></button>
+            <button onclick="showSlide(1)" aria-label="Go to slide 2"></button>
+            <button onclick="showSlide(2)" aria-label="Go to slide 3"></button>
+        </div>
+    </div>
+</header>
+    <section id="about">
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to <b>Sweet Delight Cake Shop</b>, where every cake is
+            baked with love and passion. We specialize in creating delicious
+            cakes for birthdays, weddings, anniversaries, and all special
+            occasions.
+        </p>
+
+        <p>
+            Our bakery uses fresh ingredients, premium chocolate, fresh fruits,
+            and high-quality dairy products to ensure the best taste and
+            quality in every bite.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; 2026 Sweet Delight Cake Shop |
+        Fresh Cakes Made With Love
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
