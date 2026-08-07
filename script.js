@@ -164,71 +164,54 @@ alert("Geolocation is not supported");
 function showPosition(position)
 {
 
-
 let latitude = position.coords.latitude;
 
 let longitude = position.coords.longitude;
 
-let accuracy = position.coords.accuracy;
+document.getElementById("mapContainer").innerHTML =
 
-let altitude = position.coords.altitude;
+`
 
-let heading = position.coords.heading;
+<iframe
 
-let speed = position.coords.speed;
+width="100%"
 
+height="350"
 
-let locationDetails =
+style="border:0;border-radius:10px;"
 
-"Time Stamp : " + new Date() + "\n\n" +
+loading="lazy"
 
-"Latitude : " + latitude + "\n\n" +
+allowfullscreen
 
-"Longitude : " + longitude + "\n\n" +
+referrerpolicy="no-referrer-when-downgrade"
 
-"Accuracy : " + accuracy + " meters\n\n" +
+src="https://maps.google.com/maps?q=${latitude},${longitude}&output=embed">
 
-"Altitude : " + 
-(altitude ? altitude : "n/a") + "\n\n" +
+</iframe>
 
-"Altitude in Meters : " +
-(altitude ? altitude+" meters" : "n/a") + "\n\n" +
-
-"Heading : " +
-(heading ? heading+" degrees from True North" : "n/a") + "\n\n" +
-
-"Speed : " +
-(speed ? speed+" meters/second" : "n/a");
-
-alert(locationDetails);
-
+`;
 
 }
-
 function showError(error)
 {
+    switch(error.code)
+    {
+        case error.PERMISSION_DENIED:
+            alert("Location permission denied.");
+            break;
 
-if(error.code == 1)
-{
+        case error.POSITION_UNAVAILABLE:
+            alert("Location information unavailable.");
+            break;
 
-alert("Location permission denied");
+        case error.TIMEOUT:
+            alert("Request timed out.");
+            break;
 
-}
-
-else if(error.code == 2)
-{
-
-alert("Location unavailable");
-
-}
-
-else if(error.code == 3)
-{
-
-alert("Location request timeout");
-
-}
-
+        default:
+            alert("Unknown error occurred.");
+    }
 }
 
 /* ============================================================
@@ -558,42 +541,26 @@ valid=false;
 
 // Event Date
 
-if(eventDate==="")
+// Event Date
+
+if(eventDate === "")
 {
-
-dateError.innerHTML=
-"Event date is required";
-
-valid=false;
-
+    dateError.innerHTML = "Event date is required";
+    valid = false;
 }
-
 else
 {
+    let selectedDate = new Date(eventDate);
 
-let selectedDate =
-new Date(eventDate);
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-
-let today =
-new Date();
-
-
-if(selectedDate < today)
-{
-
-dateError.innerHTML=
-"Event date cannot be in the past";
-
-valid=false;
-
+    if(selectedDate < today)
+    {
+        dateError.innerHTML = "Event date cannot be in the past";
+        valid = false;
+    }
 }
-
-}
-
-
-
-
 
 // Occasion
 
@@ -707,3 +674,8 @@ alert("Registration Successful");
 
 
 }
+document.addEventListener("DOMContentLoaded", function()
+{
+    let today = new Date().toISOString().split("T")[0];
+    document.getElementById("eventDate").setAttribute("min", today);
+});

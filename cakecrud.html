@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Cake Manager</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="cakes.html">Cakes</a>
+
+<a href="cakecrud.html" class="active">Add Cake</a>
+
+</nav>
+
+<section id="registration">
+
+<h2>Add New Cake</h2>
+
+<div class="contact-box">
+
+<form id="cakeForm">
+
+<label>Cake Name</label>
+
+<input
+type="text"
+id="cakeName"
+placeholder="Enter cake name">
+
+
+<label>Description</label>
+
+<textarea
+id="cakeDescription"
+placeholder="Enter cake description"></textarea>
+
+
+<label>Price</label>
+
+<input
+type="number"
+id="cakePrice"
+placeholder="Enter cake price">
+
+
+<label>Weight</label>
+
+<input
+type="text"
+id="cakeWeight"
+placeholder="Enter cake weight">
+
+
+<label>Upload Cake Image</label>
+
+<input
+type="file"
+id="cakeImage"
+accept="image/*">
+
+
+<button
+type="submit"
+class="contact-btn">
+
+Add Cake
+
+</button>
+
+</form>
+
+</div>
+
+<div id="cakeList"></div>
+
+</section>
+
+<script src="cakecrud.js"></script>
+
+</body>
+</html>
